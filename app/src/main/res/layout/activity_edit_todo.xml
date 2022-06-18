@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".EditTodoActivity">
+
+    <EditText
+        android:id="@+id/editTodo_activity_todoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="제목 입력"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTodo_activity_todoContent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTodo_activity_todoContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="내용 입력"
+        app:layout_constraintTop_toBottomOf="@+id/editTodo_activity_todoTitle"
+        app:layout_constraintBottom_toTopOf="@+id/editTodo_activity_btnSave"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:singleLine="false"/>
+
+    <Button
+        android:id="@+id/editTodo_activity_btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="저장"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/editTodo_activity_todoContent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
